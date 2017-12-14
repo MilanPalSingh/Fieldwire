@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>upload</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	   
+  </head>
+  <body>
+  	<h2><a href="<%= "/projects/"+ name %>"><%= name %> </a></h2>
+
+    <p>* new uplodaed files</p>
+
+  	<% for(var i =0;  i<files.length; i++) {%>
+  	<p> <%= files[i].replace(/^.*[\\\/]/, '') %>   </p>
+
+  	<%}%>
+  	
+  	
+    
+
+  </body>
+</html>

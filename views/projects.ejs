@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>upload</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	   
+  </head>
+  <body>
+    <a href="/"> <- Back</a>
+  	<h2>Projects - <%= projects.length %></h2>
+    
+  	<% for(var i =0;  i<projects.length; i++) {%>
+  	<p> <a href=<%= "/projects/"+ projects[i].name %> ><%= projects[i].name %>   </a></p>
+
+  	<%}%>
+  	
+  	
+    
+
+  </body>
+</html>

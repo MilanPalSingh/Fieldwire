@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	    
+  </head>
+  <body>
+    <h1>App</h1>
+
+    <form ref='uploadForm' 
+      id='uploadForm' 
+      action='/upload' 
+      method='post' 
+      encType="multipart/form-data">
+        <p id="formInput">
+        	<label>*Project Name</label>
+	        <input type="text" name="name" required="required" />
+	    </br>
+	        <input type="file" name="sampleFile0" />
+	    </br>
+        </p>
+    	<button onclick="addFile()">Add more!</button>
+    	<br>
+    	<br>
+
+        <input type='submit' value='Upload!' />
+        
+    </form> 
+</br>
+
+</br>
+</br>
+<a href="/projects"> view all projects</a>
+
+	<script>
+		// adding new file DOM element
+		let v=1;
+		function addFile() {
+		    let x = document.createElement("INPUT");
+		    x.setAttribute("type", "file");
+		    x.setAttribute("name", "sampleFile"+v);
+		    v++;
+		    document.getElementById("formInput").appendChild(x);
+		    x = document.createElement("br");
+		    document.getElementById("formInput").appendChild(x);
+
+		}
+	</script>
+
+
+
+  </body>
+</html>
